@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.akramkhan.complaint_trial.ComposeNotification">
+    <TextView
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/NotifiTitle"
+        android:text="Complaint Title"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:padding="10dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textSize="18dp"
+            android:gravity="left"
+            android:id="@+id/NotiiId"
+            android:padding="20dp"
+            android:text="Complaint Id:"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    <TextView
+        android:textSize="18dp"
+        android:gravity="right"
+        android:id="@+id/NotifiId"
+        android:text="complaint Id"
+        android:paddingRight="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <TextView
+        android:textSize="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:text="Complaint description"
+        android:textStyle="bold"/>
+    <TextView
+        android:textSize="20dp"
+        android:paddingTop="7dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/NotifiDesc"
+        android:paddingLeft="20dp"
+        android:text="Complaint description"/>
+    <EditText
+        android:id="@+id/Notifidetails"
+        android:layout_margin="10dp"
+        android:textSize="20dp"
+        android:padding="10dp"
+        android:hint="Notification details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/NotifiPost"
+        android:text="POST"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>
+</ScrollView>

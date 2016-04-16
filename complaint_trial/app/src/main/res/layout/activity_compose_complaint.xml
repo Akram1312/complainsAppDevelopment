@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.akramkhan.complaint_trial.ComposeComplaint">
+    <EditText
+        android:paddingTop="20dp"
+        android:paddingBottom="10dp"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="COMPLAINT TITLE"
+        android:textStyle="bold"
+        android:id="@+id/cmpCtitle"/>
+    <LinearLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:textColor="#44bbff"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textSize="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hostel :"
+            android:textStyle="bold"/>
+        <Spinner
+            android:layout_weight="2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cmpChostel"/>
+    </LinearLayout>
+
+    <TextView
+        android:textColor="#44bbff"
+        android:paddingLeft="20dp"
+        android:paddingBottom="10dp"
+        android:textSize="18dp"
+        android:text="Type of Complaint :"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <RadioGroup
+        android:id="@+id/cmpCtype"
+        android:paddingLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:id="@+id/cmpCtype1"
+            android:textSize="16dp"
+            android:text="Personal"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:id="@+id/cmpCtype2"
+            android:textSize="16dp"
+            android:text="Hostel"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:textSize="16dp"
+            android:text="Institute"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RadioGroup>
+    <LinearLayout
+        android:padding="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textColor="#44bbff"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="Authority :"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Spinner
+            android:layout_weight="2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/technician"/>
+    </LinearLayout>
+    <TextView
+        android:textColor="#44bbff"
+        android:gravity="center"
+        android:text="Description"
+        android:textSize="18dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+      />
+    <EditText
+        android:gravity="start"
+        android:padding="20dp"
+        android:id="@+id/cmpCdesc"
+        android:hint="Complaint Description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@+id/cmpCImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:padding="10dp"
+            android:layout_gravity="center"
+            android:id="@+id/takephoto"
+            android:text="Choose Photo"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    <Button
+        android:padding="10dp"
+        android:id="@+id/cmpsubmit"
+        android:layout_gravity="center"
+        android:text="SUBMIT"
+        android:textStyle="bold"
+        android:layout_width="107dp"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
+</ScrollView>
