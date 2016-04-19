@@ -9,6 +9,7 @@ import android.graphics.drawable.Drawable;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
@@ -17,6 +18,9 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.style.ImageSpan;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -48,6 +52,14 @@ public class MainActivity extends AppCompatActivity {
      * {@link android.support.v4.app.FragmentStatePagerAdapter}.
      */
     private SectionsPagerAdapter mSectionsPagerAdapter;
+
+    private int[] imageResId = {
+            R.drawable.ic_location_city_white_24dp,
+            R.drawable.ic_school_white_24dp,
+            R.drawable.ic_person_white_24dp,
+            R.drawable.ic_record_voice_over_white_24dp
+    };
+
     SharedPreferences sharedPreferences;
     public static final String MyPREFERENCES = "MyPrefs" ;
 
@@ -223,13 +235,33 @@ public class MainActivity extends AppCompatActivity {
         public CharSequence getPageTitle(int position) {
             switch (position) {
                 case 0:
-                    return "Hostel";
+                    Drawable image = ContextCompat.getDrawable(getApplicationContext(), imageResId[position]);
+                    image.setBounds(0, 0, image.getIntrinsicWidth(), image.getIntrinsicHeight());
+                    SpannableString sb = new SpannableString(" "+"Hostel");
+                    ImageSpan imageSpan = new ImageSpan(image, ImageSpan.ALIGN_BOTTOM);
+                    sb.setSpan(imageSpan, 0, 1, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+                    return sb;
                 case 1:
-                    return "Institute";
+                    Drawable image1 = ContextCompat.getDrawable(getApplicationContext(), imageResId[position]);
+                    image1.setBounds(0, 0, image1.getIntrinsicWidth(), image1.getIntrinsicHeight());
+                    SpannableString sb1 = new SpannableString(" "+"Insti");
+                    ImageSpan imageSpan1 = new ImageSpan(image1, ImageSpan.ALIGN_BOTTOM);
+                    sb1.setSpan(imageSpan1, 0, 1, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+                    return sb1;
                 case 2:
-                    return "Personal";
+                    Drawable image2 = ContextCompat.getDrawable(getApplicationContext(), imageResId[position]);
+                    image2.setBounds(0, 0, image2.getIntrinsicWidth(), image2.getIntrinsicHeight());
+                    SpannableString sb2 = new SpannableString(" "+"Personal");
+                    ImageSpan imageSpan2 = new ImageSpan(image2, ImageSpan.ALIGN_BOTTOM);
+                    sb2.setSpan(imageSpan2, 0, 1, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+                    return sb2;
                 case 3:
-                    return "Notices";
+                    Drawable image3 = ContextCompat.getDrawable(getApplicationContext(), imageResId[position]);
+                    image3.setBounds(0, 0, image3.getIntrinsicWidth(), image3.getIntrinsicHeight());
+                    SpannableString sb3 = new SpannableString(" "+"Notices");
+                    ImageSpan imageSpan3 = new ImageSpan(image3, ImageSpan.ALIGN_BOTTOM);
+                    sb3.setSpan(imageSpan3, 0, 1, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+                    return sb3;
             }
             return null;
         }

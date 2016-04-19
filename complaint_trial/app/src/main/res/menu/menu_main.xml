@@ -4,20 +4,22 @@
     tools:context="com.example.akramkhan.complaint_trial.MainActivity">
     <item
         android:id="@+id/refresh"
-        android:icon="@drawable/ic_autorenew_black_24dp"
+        android:icon="@drawable/ic_autorenew_white_24dp"
         android:title="favirotes"
         app:showAsAction="ifRoom">
     </item>
     <item
         android:id="@+id/action_favorite"
-        android:icon="@drawable/ic_sort_black_24dp"
+        android:icon="@drawable/ic_sort_white_24dp"
         android:title="favirotes"
         app:showAsAction="ifRoom">
         <menu>
             <item
+                android:icon="@drawable/ic_update_black_24dp"
                 android:title="Latest"
                 android:id="@+id/timesort"/>
             <item
+                android:icon="@drawable/ic_trending_up_black_24dp"
                 android:title="Trending"
                 android:id="@+id/trending"/>
         </menu>
